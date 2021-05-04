@@ -187,11 +187,12 @@ section .wrap .title .wrapper .dynamic-txt{
     height: 80px;
     line-height: 85px;
     overflow: hidden;
-    background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, rgb(0,255,0) 14.28%,
+    color: rgb(255, 72, 0);
+    /* background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, rgb(0,255,0) 14.28%,
     rgb(0,255,255) 21.4%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
     background-size: 600vw 600vw;
     -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; */
     animation: cont2 10s ease infinite forwards;
 }
 @keyframes cont2 {
