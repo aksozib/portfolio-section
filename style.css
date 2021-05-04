@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    vertical-align: middle;
+}
+/* common css  */
+header{
+    min-width: 100vw;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+
+}
+header menu{
+    display: flex;
+    justify-content: space-evenly;
+    flex-basis: 80%;
+    height: 80px;
+    flex-wrap: wrap;
+}
+header menu .logo{
+    flex-basis: 15%;
+    height: 80px;
+    padding-top: 10px;
+}
+
+header menu .menu-list{
+    flex-basis: 85%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header menu .menu-list ul{
+    flex-basis: 60%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-around;
+}
+
+header menu .menu-list ul li{
+}
+
+header menu .menu-list ul li a{
+    font-family: 'Roboto', sans-serif;
+    color: #222;
+    text-transform: capitalize;
+    position: relative;
+}
+header menu .menu-list ul li a::before{
+    content: '';
+    width: 30px;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: -0px;
+    background:  red;
+    opacity: 0;
+    transition: all linear 0.2s;
+
+}
+
+header menu .menu-list ul li:hover a::before{
+    bottom: -5px;
+    opacity: 1;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    height: 700px;
+}
+section .wrap{
+    display: inline-flex;
+    flex-basis: 80%;
+    height: 700px;
+    background: #fff;
+}
+section .wrap .title{
+    flex-basis: 40%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+section .wrap .title p{
+    text-transform: capitalize;
+    color: rgb(26, 121, 149);
+    font-size: 2em;
+    letter-spacing: .25em;
+    padding-left: 0.5em;
+}
+section .wrap .title h2{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 4em;
+    background: repeating-linear-gradient(-45deg, rgb(2, 0, 0) 0%, rgb(2, 98, 2) 14.28%,
+                rgb(4, 92, 92) 21.4%, cyan 28.56%, blue 35.7%, magenta 42.84%, rgb(2, 0, 0) 50%);
+    background-size: 600vw 600vw;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: cont 15s linear infinite forwards;
+}
+@keyframes cont {
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 600vw;
+    }
+}
+section .wrap .animation{
+    flex-basis: 20%;
+    height: 700px;
+    background: #fff;
+    position: relative;
+}
+
+section .wrap .animation::before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    border: 20px solid rgba(255, 99, 71, 0.568);
+    border-radius: 50%;
+    position: absolute;
+    animation: move 7s linear infinite alternate forwards;
+}
+
+@keyframes move {
+    0%{
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+    40%{
+        left: 90%;
+        transform: scale(50%);
+        opacity: 1;
+    }
+    80%{
+        left: 50px;
+        top: 250px;
+        opacity: 1;
+
+    }
+    100%{
+        left: 50px;
+        top: 375px;
+        opacity: 0;
+    }
+}
+
+
+
+section .wrap .image{
+    flex-basis: 40%;
+    height: 700px;
+}
+
+
+section .wrap .title .wrapper{
+    display: flex;
+}
+
+section .wrap .title .wrapper .static-txt{
+    color: rgb(26, 121, 149);
+    font-size: 60px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+section .wrap .title .wrapper .dynamic-txt{
+    margin-left: 10px;
+    height: 80px;
+    line-height: 85px;
+    overflow: hidden;
+    background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, rgb(0,255,0) 14.28%,
+    rgb(0,255,255) 21.4%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
+    background-size: 600vw 600vw;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: cont2 10s ease infinite forwards;
+}
+@keyframes cont2 {
+    0%{
+        background-position-y: 0%;
+    }
+    100%{
+        background-position-y: 600vw;
+    }
+}
+
+
+section .wrap .title .wrapper .dynamic-txt li{
+    list-style: none;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: -5px;
+    animation: slide 15s steps(5) infinite;
+}
+@keyframes slide {
+    100%{
+        top: -432px;
+    }
+    
+}
+section .wrap .title .wrapper .dynamic-txt li span{
+    position: relative;
+}
+section .wrap .title .wrapper .dynamic-txt li span::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1px;
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    border-left: 3px solid #90ACD3;
+    animation: typing 3s steps(13) infinite;
+}
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -20px 0 20px;
+    }
+    
+}
